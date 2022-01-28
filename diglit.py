@@ -33,7 +33,7 @@ def getKickStartData(proj_name,user_email,user_password):
 
         project_id = json.loads(soup.find_all("div", attrs={'data-attrs' : True})[0]['data-attrs'])["projectId"]
 
-        refrerrers = browser.open(f"https://www.kickstarter.com/project_referrers/refs/stats?page=1&project_id={project_id}").json()
+#         refrerrers = browser.open(f"https://www.kickstarter.com/project_referrers/refs/stats?page=1&project_id={project_id}").json()
 
         return {
             "Pleged" : pleged,
@@ -49,7 +49,7 @@ def getKickStartData(proj_name,user_email,user_password):
             "conversion_rate" : conversion_rate,
             "proj_video_plays" : proj_video_plays,
             "project_id" : project_id,
-            "Referrers" : refrerrers
+#             "Referrers" : refrerrers
         }
     
     except Exception as e:
